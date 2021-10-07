@@ -71,15 +71,10 @@ pipeline {
 
                 sh 'mvn package'
                 archiveArtifacts artifacts: 'src/**/*.java'
-                archiveArtifacts artifacts: 'target/*.java'
+                archiveArtifacts artifacts: 'target/*.jar'
 
             }
 
-            post {
-                success {
-                    junit 'target/surefure-reports/**/*.xml'
-                }
-            }
 
         }
 
