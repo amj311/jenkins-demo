@@ -1,6 +1,4 @@
 import java.util.*;
-import java.lang.Thread;
-
 
 class Calculator {
 
@@ -72,7 +70,6 @@ class Calculator {
     if you run this function twice with the same String input, it must return 2 unique String IDs
      */
     String createUniqueID(String n){
-        Thread.sleep(1);
         return n + String.valueOf(new Date().getTime());
     }
 
