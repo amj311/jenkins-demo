@@ -70,6 +70,9 @@ class Calculator {
     if you run this function twice with the same String input, it must return 2 unique String IDs
      */
     String createUniqueID(String n){
+        for (int i = 0; i < 10000; i+=2) {
+            i--
+        };
         return n + String.valueOf(new Date().getTime());
     }
 
