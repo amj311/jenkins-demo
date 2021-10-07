@@ -71,7 +71,7 @@ class Calculator {
      */
     String createUniqueID(String n){
         for (int i = 0; i < 10000; i+=2) {
-            i--
+            i--;
         };
         return n + String.valueOf(new Date().getTime());
     }
