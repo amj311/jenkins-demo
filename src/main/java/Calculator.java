@@ -1,6 +1,7 @@
 import java.util.*;
 
 class Calculator {
+    Set<String> uniqueIds = new HashSet<>();
 
     Calculator(){
 
@@ -70,10 +71,11 @@ class Calculator {
     if you run this function twice with the same String input, it must return 2 unique String IDs
      */
     String createUniqueID(String n){
-        for (int i = 0; i < 1000000; i+=2) {
-            i--;
-        };
-        return n + String.valueOf(new Date().getTime());
+        String id;
+        do {
+            id = n + Math.random();
+        } while(uniqueIds.contains(id));
+        return id;
     }
 
 
